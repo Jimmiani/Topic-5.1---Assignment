@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             // Emmett Cornies
-            int planetNumber;
+            string answerOne;
+            int planetNumber, secretNumber, score = 0;
             double weight, venWeight, marWeight, jupWeight, satWeight, uraWeight, nepWeight;
             Console.Write("Hello Mr. Cesar, please enter your current earth weight: ");
             Double.TryParse(Console.ReadLine(), out weight);
@@ -41,7 +42,58 @@
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear();
-
+            Console.WriteLine("Hello! Try to guess my secret number! I'll give you one guess, and if you get it, I'll give you my super yacht!");
+            Console.WriteLine();
+            Console.Write("Guess secret number (1-10): ");
+            Int32.TryParse(Console.ReadLine(), out secretNumber);
+            Console.WriteLine();
+            if (secretNumber == 4)
+            {
+                Console.WriteLine("WOW! You guessed it! I guess I gotta give you the super yacht my grandpa left me before he died! Oh well!");
+                Console.WriteLine();
+                Console.WriteLine("SUPER YACHT added to inventory!");
+            }
+            else if (secretNumber >= 1 && secretNumber <= 10)
+            {
+                Console.WriteLine("Ah! Nice try! The right number was 4! I guess I get to keep my super yacht!");
+            }
+            else
+                Console.WriteLine("That's not a number from 1-10! DISQUALIFIED!!");
+            Console.WriteLine();
+            Console.WriteLine("Press Enter to continue");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Time for a quiz! If you score a 100%, I'll give you a penny!");
+            Console.WriteLine();
+            Console.WriteLine("Question 1: What is the only food that cannot go bad?");
+            Console.WriteLine();
+            Console.WriteLine("\tA) Peanut Butter");
+            Console.WriteLine("\tB) Dark chocolate");
+            Console.WriteLine("\tC) Honey");
+            Console.WriteLine("\tD) Canned tuna");
+            Console.WriteLine();
+            Console.Write("Enter your answer (A-D): ");
+            answerOne = Console.ReadLine();
+            Console.WriteLine();
+            if (answerOne.ToUpper() == "C")
+            {
+                Console.WriteLine("That's correct! Press enter to continue to next question.");
+                score += 1;
+            }
+            else if (answerOne.ToUpper() == "A" || answerOne.ToUpper() == "B" || answerOne.ToUpper() == "D")
+                Console.WriteLine("That's incorrect. Press enter to continue to next question.");
+            else
+                Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press enter to continue to next question");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Question 2: Which of these is the most visited attraction in the world?");
+            Console.WriteLine();
+            Console.WriteLine("\tA) Eiffel Tower");
+            Console.WriteLine("\tB) Statue of Liberty");
+            Console.WriteLine("\tC) Forbidden City");
+            Console.WriteLine("\tD) Colosseum");
+            Console.WriteLine();
+            Console.Write("Enter your answer (A-D): ");
         }
     }
 }
