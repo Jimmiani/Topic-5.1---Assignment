@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             // Emmett Cornies
-            string answerOne;
+            string multAnswer;
             int planetNumber, secretNumber, score = 0;
             double weight, venWeight, marWeight, jupWeight, satWeight, uraWeight, nepWeight;
             Console.Write("Hello Mr. Cesar, please enter your current earth weight: ");
@@ -69,21 +69,21 @@
             Console.WriteLine();
             Console.WriteLine("\tA) Peanut Butter");
             Console.WriteLine("\tB) Dark chocolate");
-            Console.WriteLine("\tC) Honey");
-            Console.WriteLine("\tD) Canned tuna");
+            Console.WriteLine("\tC) Canned tuna");
+            Console.WriteLine("\tD) Honey");
             Console.WriteLine();
             Console.Write("Enter your answer (A-D): ");
-            answerOne = Console.ReadLine();
+            multAnswer = Console.ReadLine();
             Console.WriteLine();
-            if (answerOne.ToUpper() == "C")
+            if (multAnswer.ToUpper() == "D")
             {
-                Console.WriteLine("That's correct! Press enter to continue to next question.");
+                Console.WriteLine("That's correct! Press Enter to continue to next question.");
                 score += 1;
             }
-            else if (answerOne.ToUpper() == "A" || answerOne.ToUpper() == "B" || answerOne.ToUpper() == "D")
-                Console.WriteLine("That's incorrect. Press enter to continue to next question.");
+            else if (multAnswer.ToUpper() == "A" || multAnswer.ToUpper() == "B" || multAnswer.ToUpper() == "C")
+                Console.WriteLine("That's incorrect. The correct answer was honey. Press Enter to continue to next question.");
             else
-                Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press enter to continue to next question");
+                Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press Enter to continue to next question");
             Console.ReadLine();
             Console.Clear();
             Console.WriteLine("Question 2: Which of these is the most visited attraction in the world?");
@@ -94,6 +94,61 @@
             Console.WriteLine("\tD) Colosseum");
             Console.WriteLine();
             Console.Write("Enter your answer (A-D): ");
+            multAnswer = Console.ReadLine();
+            Console.WriteLine();
+            if (multAnswer.ToUpper() == "C")
+            {
+                Console.WriteLine("That's correct! The Forbidden City in China is the #1 most visited attraction in the world. Press Enter to continue.");
+                score += 1;
+            }
+            else if (multAnswer.ToUpper() == "A" || multAnswer.ToUpper() == "B" || multAnswer.ToUpper() == "D")
+                Console.WriteLine("That's incorrect. The correct answer was The Forbidden City. Press Enter to continue to next question.");
+            else
+                Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press Enter to continue to next question");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Question 3: What is the name of Hagrid’s pet spider?");
+            Console.WriteLine();
+            Console.WriteLine("\tA) Aragog");
+            Console.WriteLine("\tB) Crookshank");
+            Console.WriteLine("\tC) Nigini");
+            Console.WriteLine("\tD) Mosag");
+            Console.WriteLine();
+            Console.Write("Enter your answer (A-D): ");
+            multAnswer = Console.ReadLine();
+            Console.WriteLine();
+            if (multAnswer == "A")
+            {
+                Console.WriteLine("That's correct! Aragog is Hagrid's pet spider. Press Enter to continue.");
+                score += 1;
+            }
+            else if (multAnswer.ToUpper() == "B" || multAnswer.ToUpper() == "C" || multAnswer.ToUpper() == "D")
+                Console.WriteLine("That's incorrect. The correct answer was Aragog. Press Enter to continue to next question.");
+            else
+                Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press Enter to continue to next question");
+            Console.ReadLine();
+            Console.Clear();
+            Console.WriteLine("Question 4: What element does the chemical symbol Au stand for?");
+            Console.WriteLine();
+            Console.WriteLine("\tA) Mercury");
+            Console.WriteLine("\tB) Magnesium");
+            Console.WriteLine("\tC) Silver");
+            Console.WriteLine("\tD) Gold");
+            Console.WriteLine();
+            Console.Write("Enter your answer (A-D): ");
+            multAnswer = Console.ReadLine();
+            Console.WriteLine();
+            if (multAnswer.ToUpper() == "D")
+            {
+                Console.WriteLine("That's correct! The chemicAu stands Press Enter to continue to next question.");
+                score += 1;
+            }
+            else if (multAnswer.ToUpper() == "A" || multAnswer.ToUpper() == "B" || multAnswer.ToUpper() == "C")
+                Console.WriteLine("That's incorrect. The correct answer was gold. Press Enter to continue to next question.");
+            else
+                Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press Enter to continue to next question");
+            Console.ReadLine();
+            Console.Clear();
         }
     }
 }
