@@ -77,7 +77,7 @@
             Console.WriteLine();
             if (multAnswer.ToUpper() == "D")
             {
-                Console.WriteLine("That's correct! Press Enter to continue to next question.");
+                Console.WriteLine("That's correct! Honey cannot go bad. Press Enter to continue to next question.");
                 score += 1;
             }
             else if (multAnswer.ToUpper() == "A" || multAnswer.ToUpper() == "B" || multAnswer.ToUpper() == "C")
@@ -117,7 +117,7 @@
             Console.Write("Enter your answer (A-D): ");
             multAnswer = Console.ReadLine();
             Console.WriteLine();
-            if (multAnswer == "A")
+            if (multAnswer.ToUpper() == "A")
             {
                 Console.WriteLine("That's correct! Aragog is Hagrid's pet spider. Press Enter to continue.");
                 score += 1;
@@ -140,7 +140,7 @@
             Console.WriteLine();
             if (multAnswer.ToUpper() == "D")
             {
-                Console.WriteLine("That's correct! The chemicAu stands Press Enter to continue to next question.");
+                Console.WriteLine("That's correct! The chemical symbol 'Au' stands for Gold. Press Enter to continue to next question.");
                 score += 1;
             }
             else if (multAnswer.ToUpper() == "A" || multAnswer.ToUpper() == "B" || multAnswer.ToUpper() == "C")
@@ -149,6 +149,7 @@
                 Console.WriteLine("Invalid input. Answer treated as if it was incorrect. Press Enter to continue to next question");
             Console.ReadLine();
             Console.Clear();
+            Console.WriteLine("");
         }
     }
 }
