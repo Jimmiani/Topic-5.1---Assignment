@@ -1,12 +1,48 @@
-﻿namespace Topic_5._1___Assignment
+﻿using static System.Formats.Asn1.AsnWriter;
+
+namespace Topic_5._1___Assignment
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             // Emmett Cornies
-            string multAnswer, textAnswer, trueFalseAns;
-            int planetNumber, secretNumber, score = 0, numberAnswer;
+            string choice;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Clear();
+            do
+            {
+                Console.WriteLine("Welcome to my generic menu.  Please select an option:");
+                Console.WriteLine();
+                Console.WriteLine("1 - Space Boxing");
+                Console.WriteLine("2 - Guessing Game");
+                Console.WriteLine("3 - Quiz");
+                Console.WriteLine("Q - Quit");
+                Console.WriteLine();
+                choice = Console.ReadLine().ToLower().Trim();
+                Console.WriteLine();
+
+                if (choice == "1")
+                {
+                    SpaceBoxing();
+                }
+                else if (choice == "2")
+                {
+                    SecretNumber();
+                }
+                else if (choice == "3")
+                {
+                    Quiz();
+                }
+
+            } while (choice != "q");
+        }
+
+
+        public static void SpaceBoxing()
+        {
+            
+            int planetNumber; 
             double weight, venWeight, marWeight, jupWeight, satWeight, uraWeight, nepWeight;
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.Clear();
@@ -44,6 +80,14 @@
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
             Console.Clear();
+        }
+
+        public static void SecretNumber()
+        {
+            // Emmett Cornies
+            int secretNumber;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Clear();
             Console.WriteLine("Hello! Try to guess my secret number! I'll give you one guess, and if you get it, I'll give you my super yacht!");
             Console.WriteLine();
             Console.Write("Guess secret number (1-10): ");
@@ -64,6 +108,14 @@
             Console.WriteLine();
             Console.WriteLine("Press Enter to continue");
             Console.ReadLine();
+            Console.Clear();
+        }
+
+        public static void Quiz()
+        {
+            string multAnswer, textAnswer, trueFalseAns;
+            int score = 0, numberAnswer;
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.Clear();
             Console.WriteLine("Time for a quiz! If you score a 100%, there's a special surprise at the end!");
             Console.WriteLine();
@@ -163,5 +215,6 @@
                 Console.WriteLine("You didn't even get a single question right? You're either dumb, or just skipping through the questions... Try again!");
             Console.ReadLine();
         }
+
     }
 }
